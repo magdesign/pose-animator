@@ -80,7 +80,7 @@ It should also run on Chrome on Android and potentially more Android mobile brow
 1. Download the [sample skeleton SVG here](/resources/samples/skeleton.svg).
 2. Edit it in Inkscape, make sure you open the Objects window to place all designs on the right Object layer:
 
-<img src="/resources/gifs/avatar-new-1.gif?raw=true" alt="cameraDemo" style="width: 250px;"/>
+<img src="/resources/images/inkscape_objects.png" alt="inkscape_objects" style="width: 400px;"/>
 
 1. Create a new file in your vector graphics editor of choice. Copy the group named ‘skeleton’ from the above file into your working file. Note: 
 	* Do not add, remove or rename the joints (circles) in this group. Pose Animator relies on these named paths to read the skeleton’s initial position. Missing joints will cause errors.
