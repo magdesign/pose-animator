@@ -44,75 +44,6 @@ sudo apt update
 sudo apt install yarn
 ```
 
-then replace the whole content of  `package.json `with:
-
-```
-{
-  "name": "tfjs-models",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
-  "license": "Apache-2.0",
-  "private": true,
-  "engines": {
-    "node": ">=8.9.0"
-  },
-  "dependencies": {
-    "@tensorflow-models/facemesh": "^0.0.1",
-    "@tensorflow-models/posenet": "^2.2.1",
-    "@tensorflow/tfjs": "^1.7.0",
-    "@tensorflow/tfjs-converter": "^1.7.0",
-    "@tensorflow/tfjs-core": "^1.7.0",
-    "face-api.js": "^0.22.1",
-    "paper": "^0.12.1",    
-    "stats.js": "^0.17.0"
-  },
-  "scripts": {
-    "watch": "cross-env NODE_ENV=development parcel index.html --no-source-maps --no-hmr --open ",
-    "build": "cross-env NODE_ENV=production parcel build index.html --no-source-maps --public-url ./",
-    "build-camera": "cross-env NODE_ENV=production parcel build camera.html --public-url ./",
-    "lint": "eslint .",
-    "link-local": "yalc link"
-  },
-  "browser": {
-    "crypto": false
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-plugin-transform-runtime": "~6.23.0",
-    "babel-polyfill": "~6.26.0",
-    "babel-preset-env": "~1.6.1",
-    "babel-preset-es2017": "^6.24.1",
-    "clang-format": "~1.2.2",
-    "cross-env": "^5.2.0",
-    "dat.gui": "^0.7.2",
-    "eslint": "^4.19.1",
-    "eslint-config-google": "^0.9.1",
-    "parcel-bundler": "~1.12.4",
-    "yalc": "~1.0.0-pre.27"
-  },
-  "eslintConfig": {
-    "extends": "google",
-    "rules": {
-      "require-jsdoc": 0,
-      "valid-jsdoc": 0
-    },
-    "env": {
-      "es6": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 8,
-      "sourceType": "module"
-    }
-  },
-  "eslintIgnore": [
-    "dist/"
-  ]
-}
-```
-
-
-
 then:
 
 `yarn`
@@ -147,6 +78,10 @@ It should also run on Chrome on Android and potentially more Android mobile brow
 # Animate your own design
 
 1. Download the [sample skeleton SVG here](/resources/samples/skeleton.svg).
+2. Edit it in Inkscape, make sure you open the Objects window to place all designs on the right Object layer:
+
+<img src="/resources/gifs/avatar-new-1.gif?raw=true" alt="cameraDemo" style="width: 250px;"/>
+
 1. Create a new file in your vector graphics editor of choice. Copy the group named ‘skeleton’ from the above file into your working file. Note: 
 	* Do not add, remove or rename the joints (circles) in this group. Pose Animator relies on these named paths to read the skeleton’s initial position. Missing joints will cause errors.
 	* However you can move the joints around to embed them into your illustration. See step 4.
